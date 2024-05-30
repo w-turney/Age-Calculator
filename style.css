@@ -1,0 +1,163 @@
+:root {
+    --ff-sans: 'Poppins', sans-serif;
+
+    --clr-offwhite: hsl(0, 0%, 94%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-lightgrey: hsl(0, 0%, 86%);
+    --clr-smokeygrey: hsl(0, 1%, 44%);
+    --clr-purple: hsl(259, 100%, 65%);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--ff-sans);
+    
+}
+
+body {
+    margin: 0;
+    background-color: var(--clr-offwhite);
+}
+
+.calculator {
+    background-color: var(--clr-white);
+    width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1.85rem;
+    border-radius: 3% 3% 25% 3%;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 25% 25% 25%;
+    gap: 0.25rem 0;
+    color: var(--clr-smokeygrey);
+    margin-bottom: 1rem;
+}
+
+label {
+    font-size: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+input {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: black;
+    width: 80%;
+    position: relative;
+    left: 2%;
+    padding: 0.7rem;
+    border: solid 1px var(--clr-lightgrey);
+    border-radius: 2%;
+}
+
+input[type='number'] {
+    width: 90%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+form > span {
+    font-size: 0.6rem;
+    font-style: italic;
+    color: red;
+}
+
+.divider {
+    display: grid;
+    grid-template-columns: 85% 10%;
+    margin-bottom: 1rem;
+}
+
+.line {
+    height: 0;
+    border: solid  0.5px var(--clr-lightgrey);
+    position: relative;
+    top: 50%;
+}
+
+button {
+    background-color: var(--clr-purple);
+    border: none;
+    border-radius: 50%;
+    padding: 2rem
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+
+.display > * {
+    display: flex;
+    justify-content: flex-start;
+    min-width: min-content;
+    align-items: center;
+    font-size: 3rem;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.dash {
+    width: 1.75rem;
+    height: 0.6rem;
+    background-color: var(--clr-purple);
+    transform: skew(-10deg);
+}
+
+.dash:first-of-type {
+    margin-right: 0.5rem
+}
+
+.result {
+    display: flex;
+    color: var(--clr-purple);
+    font-weight: 800;
+}
+
+.display span {
+    margin-left: 1rem;
+}
+
+
+@media (max-width: 510px) {
+
+    .calculator {
+        width: 90%;
+    }
+
+    form {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-bottom: 3rem;
+    }
+
+    .divider {
+        grid-template-columns: 100%; 
+        place-items: center;
+        margin-bottom: 2rem;
+    }
+
+    .line {
+        width: 100%;
+    }
+
+    button {
+        position: absolute
+    }
+    
+}
+

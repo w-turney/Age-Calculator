@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Age calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="calculator">
+        <form id="form">
+          <label for="day">DAY</label>
+          <label for="month">MONTH</label>
+          <label for="year">YEAR</label>
+          <input type="number" id="day" placeholder="DD">
+          <input type="number" id="month" placeholder="MM">
+          <input type="number" id="year" placeholder="YYYY"> <!--how do i check that year is less than current year?-->
+          <span class="hidden" id="dayspan"></span>
+          <span class="hidden" id="monthspan"></span>
+          <span class="hidden" id="yearspan"></span>
+        </form>
+
+        <div class="divider">
+          <div class="line"></div>
+          <button id="button"></button>
+        </div>
+        
+        <div class="display">
+          <div class="years">
+            <div class="result years">
+              <div class="dash"></div>
+              <div class="dash"></div>
+            </div>
+            <span>YEARS</span>
+          </div>
+          <div class="months">
+            <div class="result months">
+              <div class="dash"></div>
+              <div class="dash"></div>
+            </div>   
+            <span>MONTHS</span>   
+          </div>   
+          <div class="days">
+            <div class="result days">
+              <div class="dash"></div>
+              <div class="dash"></div>
+            </div>  
+            <span>DAYS</span>
+          </div>
+        </div>
+
+
+
+        <!-- redo from here -->
+        <!-- <div class="time years">
+          <div class="wrapper">
+            <div class="dash"></div>
+            <div class="dash"></div>
+          </div>
+          <span>years</span><br>
+        </div>
+        <div class="time months">
+          <div class="wrapper">
+            <div class="dash"></div>
+            <div class="dash"></div>
+          </div>
+          <span>months</span><br>
+        </div>
+        <div class="time days">
+          <div class="wrapper">
+            <div class="dash"></div>
+            <div class="dash"></div>
+          </div>
+          <span>days</span>
+        </div>
+      </div> -->
+      <script src="app.js"></script>
+    </main>
+  </body>
+</html>
